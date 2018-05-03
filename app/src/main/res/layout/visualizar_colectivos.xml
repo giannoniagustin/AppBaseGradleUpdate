@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/borde_personalizado"
+    android:orientation="vertical"
+    android:weightSum="1"
+    style="@android:style/Theme.Black"
+    android:focusable="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:weightSum="1"
+        style="@android:style/Theme.Black"
+        android:layout_weight="0.62">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_obtener_colectivos"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold|normal"
+            android:textSize="32dp" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:id="@+id/spinner"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:layout_weight="0.70"
+            android:spinnerMode="dialog"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSeekBar"
+            android:visibility="invisible"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_cancelar"
+                android:id="@+id/boton_cerrar"
+                android:layout_weight="0.25"
+                android:background="@drawable/borde_personalizado" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_enviar"
+                android:id="@+id/boton_enviar"
+                android:layout_weight="0.25"
+                android:layout_gravity="right"
+                android:background="@drawable/borde_personalizado" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "transporte.appbase.RegistroActivity"/>
+      <point      
+        x = "1928"      
+        y = "220"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "transporte.appbase.InicioSesionActivity"/>
+      <point      
+        x = "608"      
+        y = "476"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "transporte.appbase.MapsActivity"/>
+      <point      
+        x = "1508"      
+        y = "532"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "transporte.appbase.PantallaInicioActivity"/>
+      <point      
+        x = "1532"      
+        y = "1136"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

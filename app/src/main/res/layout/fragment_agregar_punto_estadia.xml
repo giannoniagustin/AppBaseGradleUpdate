@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde_personalizado"
+
+        style="@android:style/Theme.Black"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:layout_weight="0.37"
+        android:weightSum="1">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView android:layout_width="291dp"
+            android:layout_height="0dp"
+            android:text="@string/blank_fragment"
+            android:textStyle="bold|normal"
+            android:textSize="32dp"
+            android:id="@+id/punto_estadia"
+            android:layout_weight="0.82" />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/nombre_estadia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde_botons_punto_estadia"
+                android:text="@string/nombre_estadia"
+                android:singleLine="false" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:id="@+id/nombre_descripcion"
+                android:layout_gravity="right"
+                android:layout_weight="0.06"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+
+        <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/fecha_inicio_estadia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borde_botons_punto_estadia"
+                    android:text="@string/fecha_inicio_estadia"
+                    android:onClick="showDatePickerDialog"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/fechaInicioSeleccionada"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.06"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/hora_inicio_estadia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borde_botons_punto_estadia"
+                    android:text="@string/hora_inicio_estadia"
+                    android:onClick="showTimePickerDialog"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/horaInicioSeleccionada"
+                    android:layout_gravity="right"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          >
+
+            <Button
+                android:id="@+id/fecha_fin_estadia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde_botons_punto_estadia"
+                android:text="@string/fecha_fin_estadia"
+                android:onClick="showDatePickerDialog"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:id="@+id/fechaFinSeleccionada"
+                android:layout_gravity="right"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/hora_fin_estadia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borde_botons_punto_estadia"
+                    android:text="@string/hora_fin_estadia"
+                    android:onClick="showTimePickerDialog"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/horaFinSeleccionada"
+                    android:layout_gravity="right"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+<!--
+    <LinearLayout
+        android:id="@+id/expand_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+            <CheckBox
+                android:id="@+id/repeat"
+                android:layout_width="157dp"
+                android:layout_height="48dip"
+                android:layout_gravity="center_vertical|start"
+                android:text="@string/repite_rutina"
+                android:textColor = "#030303"
+                android:textSize="16sp"
+                android:paddingStart="12dip"
+                android:visibility="visible" />
+            <LinearLayout
+                android:weightSum="7"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true">
+                <ToggleButton
+                    android:textOn="L"
+                    android:textOff="L"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chk_lunes"
+                    android:visibility="invisible"
+                   />
+                <ToggleButton
+                    android:textOn="M"
+                    android:textOff="M"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chk_martes"
+                    android:visibility="invisible"/>
+                <ToggleButton
+                    android:textOn="M"
+                    android:textOff="M"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chk_miercoles"
+                    android:visibility="invisible"/>
+                <ToggleButton
+                    android:textOn="J"
+                    android:textOff="J"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chk_jueves"
+                    android:visibility="invisible"/>
+                <ToggleButton
+                    android:textOn="V"
+                    android:textOff="V"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chk_viernes"
+                    android:visibility="invisible"/>
+                <ToggleButton
+                    android:textOn="S"
+                    android:textOff="S"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chk_sabado"
+                    android:visibility="invisible"/>
+                <ToggleButton
+                    android:textOn="D"
+                    android:textOff="D"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chk_domingo"
+                    android:visibility="invisible"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_cancelar"
+                android:id="@+id/boton_cerrar"
+                android:layout_weight="0.25"
+                android:background="@drawable/borde_personalizado" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_enviar"
+                android:id="@+id/boton_enviar_rutina"
+                android:layout_weight="0.25"
+                android:layout_gravity="right"
+                android:background="@drawable/borde_personalizado" />
+        </LinearLayout>
+
+
+
+</LinearLayout>
+

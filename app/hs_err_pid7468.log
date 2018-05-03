@@ -1,0 +1,49 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 512976 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:323), pid=7468, tid=8080
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001e8d000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=8080, stack(0x000000000a840000,0x000000000a940000)]
+
+Stack: [0x000000000a840000,0x000000000a940000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+
+Current CompileTask:
+C2:   1784   97             com.android.dx.ssa.SsaMethod::forEachInsn (36 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000a4d3000 JavaThread "pool-1-thread-4" [_thread_in_Java, id=7216, stack(0x000000000b040000,0x000000000b140000)]
+  0x000000000a4d2800 JavaThread "pool-1-thread-3" [_thread_in_vm, id=3308, stack(0x000000000af40000,0x000000000b040000)]
+  0x000000000a4d1800 JavaThread "pool-1-thread-2" [_thread_in_Java, id=1056, stack(0x000000000ae40000,0x000000000af40000)]
+  0x000000000a521000 JavaThread "pool-2-thread-1" [_thread_in_vm, id=3696, stack(0x000000000ad40000,0x000000000ae40000)]
+  0x000000000a520800 JavaThread "pool-1-thread-1" [_thread_in_vm, id=2072, stack(0x000000000ac40000,0x000000000ad40000)]
+  0x0000000001e8f800 JavaThread "Service Thread" daemon [_thread_blocked, id=3924, stack(0x000000000aa40000,0x000000000ab40000)]
+  0x0000000001e8e800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native

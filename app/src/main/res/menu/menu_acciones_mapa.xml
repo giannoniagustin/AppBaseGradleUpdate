@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/item1"
+        android:title="@string/item_cortes"
+        android:background="@drawable/borde_personalizado">
+        <menu>
+            <item
+                android:id="@+id/item1.1"
+                android:onClick="clickItem"
+                android:title="@string/item_reportar_corte"
+                android:icon="@drawable/ic_launcher"
+                android:background="@drawable/borde_personalizado" />
+            <item
+                android:id="@+id/item1.2"
+                android:onClick="clickItemCortesDistancia"
+                android:title="@string/item_obtener_cortes_distancia"
+                android:background="@drawable/borde_personalizado"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/item2"
+        android:title="@string/item_SUMO"
+        android:background="@drawable/borde_personalizado">
+        <menu>
+            <item
+                android:id="@+id/item2.1"
+                android:onClick="clickItemParquimetros"
+                android:title="@string/item_obtener_parquimetros"
+                android:background="@drawable/borde_personalizado" />
+
+            <item
+                android:id="@+id/item2.2"
+                android:onClick="clickItemPuntosCarga"
+                android:title="@string/item_puntos_carga"
+                android:background="@drawable/borde_personalizado"/>
+            <item
+                android:id="@+id/item2.3"
+                android:onClick="clickSaldo"
+                android:title="@string/item_obtener_saldo"
+                android:background="@drawable/borde_personalizado"/>
+            <item
+                android:id="@+id/item2.4"
+                android:onClick="clickItemColectivos"
+                android:title="@string/item_obtener_colectivos"
+                android:background="@drawable/borde_personalizado"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item3"
+        android:title="@string/item_rutinas"
+        android:background="@drawable/borde_personalizado">
+
+        <menu>
+
+        <!--    <item android:id="@+id/item3.1"
+                android:onClick="clickItemVisualizarRutinas"
+                android:title="@string/visualizar_rutinas" />
+        -->
+            <item android:id="@+id/item3.1"
+                android:onClick="clickProximaActividad"
+                android:title="@string/proxima_actividad" />
+            <item android:id="@+id/item3.2"
+                android:onClick="clasificarRutinasPorFecha"
+                android:title="@string/filtrar_puntos_estadia_fecha" />
+            <item android:id="@+id/item3.3"
+                android:onClick="clickNuevoPuntoEstadia"
+                android:title="@string/nuevo_punto_estadia" />
+            <item android:id="@+id/item3.4"
+                android:onClick="clickVerPuntosEstadia"
+                android:title="@string/ver_puntos_estadia" />
+        <!--    <item android:id="@+id/item4.4"
+                android:onClick="clickSimularAlarma"
+                android:title="@string/simulacion_alarma" /> -->
+        </menu>
+
+
+    </item>
+    <item
+        android:id="@+id/item4"
+        android:title="@string/item_ruta"
+        android:background="@drawable/borde_personalizado"
+        android:onClick="clickItemCalculoRuta"/>
+
+
+
+
+</menu>

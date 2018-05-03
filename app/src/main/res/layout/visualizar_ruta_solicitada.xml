@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/borde_personalizado"
+    android:orientation="vertical"
+    android:weightSum="1"
+    style="@android:style/Theme.Black"
+    android:focusable="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:weightSum="1"
+        style="@android:style/Theme.Black"
+        android:layout_weight="0.56">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_obtener_ruta"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold|normal"
+            android:textSize="32dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tituloOrigen"
+            android:visibility="visible"
+            android:text="@string/origen"
+            android:textStyle="bold|normal"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroupOrigen">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mi_ubicacion"
+                    android:id="@+id/radioButtonUbicacionActual"
+                    android:layout_weight="0.25"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/otra_ubicacion"
+                    android:id="@+id/radioButtonUbicacionElige"
+                    android:layout_weight="0.25"/>
+            </RadioGroup>
+        </LinearLayout>
+        <TextView
+            android:layout_width="349dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/origenIngresado"
+            android:visibility="invisible"
+            android:text=""
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tituloDestino"
+            android:visibility="visible"
+            android:text="@string/destino"
+            android:textStyle="bold|normal"
+            android:textSize="15dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/radioGroupDestino">
+
+
+                    <RadioButton
+                        android:layout_width="158dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/puntosConocidos"
+                        android:id="@+id/puntosConocidos" />
+
+
+
+                    <RadioButton
+                        android:layout_width="158dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ingrese_destino"
+                        android:id="@+id/ingreseDestino" />
+
+                </RadioGroup>
+                <Spinner
+                    android:layout_width="196dp"
+                    android:layout_height="34dp"
+                    android:id="@+id/spinnerPuntosConocidos"
+                    android:visibility="invisible"
+                    android:layout_gravity="center_horizontal"
+                    android:spinnerMode="dialog"/>
+
+                <TextView
+                    android:layout_width="349dp"
+                    android:layout_height="33dp"
+                    android:id="@+id/destinoIngresado"
+                    android:visibility="invisible"
+                    android:text=""
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_cancelar"
+                android:id="@+id/boton_cerrar"
+                android:layout_weight="0.25"
+                android:background="@drawable/borde_personalizado" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boton_enviar"
+                android:id="@+id/boton_enviar"
+                android:layout_weight="0.25"
+                android:layout_gravity="right"
+                android:background="@drawable/borde_personalizado" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
